@@ -1,0 +1,86 @@
+{
+  "name": "confidential-portfolio-manager",
+  "version": "1.0.0",
+  "description": "Confidential Portfolio Manager - Privacy Asset Management with FHE",
+  "private": true,
+  "homepage": "./",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "build:vercel": "CI=false GENERATE_SOURCEMAP=false react-scripts build",
+    "test": "react-scripts test --watchAll=false",
+    "eject": "react-scripts eject",
+    "dev": "react-scripts start",
+    "analyze": "npm run build && npx serve -s build"
+  },
+  "keywords": [
+    "react",
+    "blockchain", 
+    "fhe",
+    "privacy",
+    "portfolio",
+    "assets",
+    "confidential",
+    "vercel"
+  ],
+  "author": "Confidential Portfolio Team",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.28.4",
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0", 
+    "@testing-library/user-event": "^13.5.0",
+    "autoprefixer": "^10.4.14",
+    "axios": "^1.5.0",
+    "clsx": "^2.0.0",
+    "date-fns": "^2.30.0",
+    "ethers": "^6.4.0",
+    "framer-motion": "^10.16.0",
+    "lucide-react": "^0.292.0",
+    "postcss": "^8.4.24",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.47.0",
+    "react-hot-toast": "^2.4.1",
+    "react-router-dom": "^6.8.0",
+    "react-scripts": "5.0.1",
+    "recharts": "^2.8.0",
+    "tailwindcss": "^3.3.0",
+    "web-vitals": "^2.1.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ],
+    "rules": {
+      "no-unused-vars": "warn",
+      "no-console": "off"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "resolutions": {
+    "webpack": "5.88.2"
+  }
+}

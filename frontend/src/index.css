@@ -1,0 +1,250 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --dark-gradient: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  --success-gradient: linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%);
+  --warning-gradient: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);
+  --error-gradient: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--primary-gradient);
+  min-height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Custom Components */
+.bg-primary-gradient {
+  background: var(--primary-gradient);
+}
+
+.bg-secondary-gradient {
+  background: var(--secondary-gradient);
+}
+
+.bg-accent-gradient {
+  background: var(--accent-gradient);
+}
+
+.bg-dark-gradient {
+  background: var(--dark-gradient);
+}
+
+.bg-success-gradient {
+  background: var(--success-gradient);
+}
+
+.bg-warning-gradient {
+  background: var(--warning-gradient);
+}
+
+.bg-error-gradient {
+  background: var(--error-gradient);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glow-effect {
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+}
+
+.glow-accent {
+  box-shadow: 0 0 20px rgba(79, 172, 254, 0.3);
+}
+
+.glow-secondary {
+  box-shadow: 0 0 20px rgba(240, 147, 251, 0.3);
+}
+
+/* Button Styles */
+.btn-primary {
+  @apply px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold rounded-lg 
+         shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 
+         border border-transparent hover:border-white/20;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 bg-gradient-to-r from-pink-500 to-red-500 text-white font-semibold rounded-lg 
+         shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 
+         border border-transparent hover:border-white/20;
+}
+
+.btn-accent {
+  @apply px-6 py-3 bg-gradient-to-r from-blue-400 to-cyan-400 text-white font-semibold rounded-lg 
+         shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 
+         border border-transparent hover:border-white/20;
+}
+
+.btn-outline {
+  @apply px-6 py-3 bg-transparent text-white font-semibold rounded-lg border-2 border-white/30 
+         hover:border-white hover:bg-white/10 transition-all duration-200;
+}
+
+.btn-glass {
+  @apply px-6 py-3 glass-effect text-white font-semibold hover:bg-white/20 transition-all duration-200;
+}
+
+/* Card Styles */
+.card {
+  @apply glass-effect p-6 hover:bg-white/20 transition-all duration-300;
+}
+
+.card-dark {
+  @apply glass-dark p-6 hover:bg-black/20 transition-all duration-300;
+}
+
+/* Input Styles */
+.input-glass {
+  @apply glass-effect px-4 py-3 text-white placeholder-white/70 border-none outline-none 
+         focus:bg-white/20 transition-all duration-200;
+}
+
+.input-glass::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Animation Classes */
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+.animate-bounce-in {
+  animation: bounceIn 0.8s ease-out;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(102, 126, 234, 0.6);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    @apply p-4;
+  }
+  
+  .btn-primary,
+  .btn-secondary,
+  .btn-accent,
+  .btn-outline,
+  .btn-glass {
+    @apply px-4 py-2 text-sm;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Loading Spinner */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
