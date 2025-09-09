@@ -1,7 +1,7 @@
 // Contract configuration
 export const CONTRACT_CONFIG = {
   // Main contract address
-  CONFIDENTIAL_PORTFOLIO_ADDRESS: process.env.REACT_APP_CONTRACT_ADDRESS || "0x1222ea52e18529ce4feb108Cae999f74F6e6A297",
+  CONFIDENTIAL_PORTFOLIO_ADDRESS: process.env.REACT_APP_CONTRACT_ADDRESS || "0x4709792Ea052431C28f0359225E3e6F441691b3d",
   
   // Network configuration
   NETWORK: process.env.REACT_APP_NETWORK || "sepolia",
